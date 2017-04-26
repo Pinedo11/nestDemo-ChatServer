@@ -1,0 +1,19 @@
+{
+  "name": "src",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@types/socket.io": "^1.4.29",
+    "body-parser": "^1.17.1",
+    "cookie": "^0.3.1",
+    "cors": "^2.8.3",
+    "nest.js": "^1.0.0-rc8",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.1"
+  }
+}
