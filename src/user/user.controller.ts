@@ -1,20 +1,20 @@
-import { Controller, Post } from 'nest.js';
+import { Controller, Post, Response, Body, HttpStatus } from 'nest.js';
 import { User } from './types/User.type';
 import { UserService } from './user.service';
 
-@Controller({ path: 'users' })
+@Controller('users')
 export class UserController {
 
     constructor (private userService:UserService) {
     }
 
     @Post()
-    async addUser (req, res) {
+    async addUser (@Response() res, @Body('userName') userName) {
         try {
-            let user:User = await this.userService.addUser(req.body.userName);
-            res.status(201).send(user);
+            let user:User = await this.userService.addUser(userName);
+            res.status(HttpStatus.CREATED).send(user);
         } catch (e) {
-            res.status(501).json(`User ${e} is already in the chat`);
+            res.status(HttpStatus.CONFLICT).json(`User ${e} is already in the chat`);
         }
     }
 }
