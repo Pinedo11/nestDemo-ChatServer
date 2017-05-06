@@ -1,0 +1,3 @@
+[submodule "Client"]
+	path = Client
+	url = git://github.com/Pinedo11/nestDemo-ChatClient.git

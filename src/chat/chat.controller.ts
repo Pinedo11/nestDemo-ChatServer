@@ -1,16 +1,15 @@
-import { Controller, Get } from 'nest.js';
+import { Controller, Get, Response, HttpStatus } from 'nest.js';
 import { messages } from 'nest.js/core/constants';
 import { ChatService } from './chat.service';
 
-@Controller({ path: 'messages' })
+@Controller('messages')
 export class ChatController {
 
     constructor (private chatService:ChatService) {}
 
     @Get()
-    async getAllMessages (req, res) {
-        console.log('Hey');
+    async getAllMessages (@Response() res) {
         const messages = await this.chatService.getMessages();
-        res.status(200).json(messages);
+        res.status(HttpStatus.OK).json(messages);
     }
 }
