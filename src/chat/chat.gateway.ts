@@ -1,5 +1,4 @@
-import { messages } from 'nest.js/core/constants';
-import { NestGateway, SubscribeMessage, WebSocketGateway } from 'nest.js/websockets';
+import { NestGateway, SubscribeMessage, WebSocketGateway } from '@nestjs/websockets';
 import { User } from '../user/types/User.type';
 import { ChatService } from './chat.service';
 import { Message } from './types/Message.type';

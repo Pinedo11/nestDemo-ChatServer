@@ -1,4 +1,4 @@
-import { Controller, Post, Response, Body, HttpStatus } from 'nest.js';
+import { Controller, Post, Response, Body, HttpStatus } from '@nestjs/common';
 import { User } from './types/User.type';
 import { UserService } from './user.service';
 

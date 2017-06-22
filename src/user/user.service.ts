@@ -1,4 +1,4 @@
-import { Component } from 'nest.js';
+import { Component } from '@nestjs/common';
 import { User } from './types/User.type';
 
 @Component()

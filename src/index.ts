@@ -1,7 +1,7 @@
 import * as bodyParser from 'body-parser';
 import * as cors from 'cors';
 import * as express from 'express';
-import { NestFactory } from 'nest.js';
+import { NestFactory } from '@nestjs/core';
 import { ApplicationModule } from './app.module';
 
 const instance = express();

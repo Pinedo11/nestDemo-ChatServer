@@ -1,5 +1,4 @@
-import { Controller, Get, Response, HttpStatus } from 'nest.js';
-import { messages } from 'nest.js/core/constants';
+import { Controller, Get, Response, HttpStatus } from '@nestjs/common';
 import { ChatService } from './chat.service';
 
 @Controller('messages')
